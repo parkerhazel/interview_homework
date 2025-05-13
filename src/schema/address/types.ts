@@ -1,7 +1,8 @@
 export type Address = {
-  street: string;
-  city: string;
-  zipcode: string;
+  street?: string;
+  city?: string;
+  zipcode?: string;
+  state?: string;
 };
 
 export type Addresses = {
