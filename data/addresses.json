@@ -1,12 +1,24 @@
 {
-  "jack": {
-    "street": "123 Street St.",
-    "city": "Sometown",
-    "zipcode": "43215"
-  },
-  "jill": {
-    "street": "234 Other St",
-    "city": "Townville",
-    "zipcode": "32145"
-  }
+ "jack": {
+  "street": "123 Street St.",
+  "city": "Sometown",
+  "zipcode": "43215"
+ },
+ "jill": {
+  "street": "234 Other St",
+  "city": "Townville",
+  "zipcode": "32145"
+ },
+ "test": {
+  "street": "678 This Ave",
+  "city": "Charlotte",
+  "zipcode": "89301",
+  "state": "NC"
+ },
+ "test2": {
+  "street": "678 This Ave",
+  "city": "Charlotte",
+  "zipcode": "89301",
+  "state": "NC"
+ }
 }
