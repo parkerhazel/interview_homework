@@ -1,4 +1,4 @@
-import { Addresses, Address, Args, createAddressInput, createAddressArgs } from "./types";
+import { Addresses, Address, Args, CreateAddressInput, CreateAddressArgs } from "./types";
 import { logger, LogLevel } from "../../utils";
 import { GraphQLError } from "graphql";
 import * as jsonfile from 'jsonfile';
@@ -41,7 +41,7 @@ export const getAddress = async (_: any, args: Args, context: any): Promise<Addr
   throw new GraphQLError("No address found in getAddress resolver");
 };
 
-const _createAddress = async (username: string, createAddressInput: createAddressInput): Promise<Address> => {
+const _createAddress = async (username: string, createAddressInput: CreateAddressInput): Promise<Address> => {
   const currentAddresses = await readAddressesFromFile();
   if (currentAddresses[username]) {
     logger(LogLevel.ERROR, "_createAddress", "Username already has address. Creation Failed");
@@ -55,7 +55,7 @@ const _createAddress = async (username: string, createAddressInput: createAddres
   return currentAddresses[username];
 }
 
-export const createAddress = async (_: any, args: createAddressArgs, context: any): Promise<Address> => {
+export const createAddress = async (_: any, args: CreateAddressArgs, context: any): Promise<Address> => {
   logger(LogLevel.INFO, "createAddress", "Enter resolver");
   const address = await _createAddress(args.username, args.createAddressInput);
   if (address) {

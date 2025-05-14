@@ -1,5 +1,5 @@
 import { getAddress, createAddress } from "./address/address";
-import { Address, Args, createAddressArgs } from "./address/types";
+import { Address, Args, CreateAddressArgs } from "./address/types";
 
 export const resolvers = {
   Query: {
@@ -8,7 +8,7 @@ export const resolvers = {
     },
   },
   Mutation: {
-    createAddress: async (parent: any, args: createAddressArgs, context: any, info: any): Promise<Address> => {
+    createAddress: async (parent: any, args: CreateAddressArgs, context: any, info: any): Promise<Address> => {
       return await createAddress(parent, args, context);
     }
   }
